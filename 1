@@ -1,0 +1,13 @@
+local res = game:GetService('HttpService'):JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. game.PlaceId .. '/servers/Public?sortOrder=Asc&limit=100'))
+for _, server in pairs(res.data) do
+	if server.playing < server.maxPlayers then
+		game:GetService('TeleportService'):TeleportToPlaceInstance(game.PlaceId, server.id)
+		break
+	end
+end
+
+queueonteleport(([[
+  if #workspace.SpecialKeys:GetChildren() == 0 then
+    loadstring(game:HttpGet(""))()
+  end
+]]))
