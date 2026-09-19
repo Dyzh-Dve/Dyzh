@@ -1,16 +1,11 @@
-task.spawn(function()
-	while task.wait(0.1) do
-		game:GetService("VirtualUser"):ClickButton2(Vector2.new())
-	end
-end)
 queueonteleport(([[
   repeat
     task.wait()
   until game:IsLoaded()
   if workspace:GetAttribute("Weather") == "Thunderstorm" then
-    print(11)
+    print(1)
   else
-    print(21)
+    print(2)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyzh-Dve/Dyzh/refs/heads/main/1"))()
     local res = game:GetService('HttpService'):JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. game.PlaceId .. '/servers/Public?sortOrder=Asc&limit=100'))
     for _, server in pairs(res.data) do
