@@ -7,7 +7,13 @@ for _, server in pairs(res.data) do
 end
 
 queueonteleport(([[
+  repeat
+    task.wait()
+  until workspace
   if #workspace.SpecialKeys:GetChildren() == 0 then
+    print(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyzh-Dve/Dyzh/refs/heads/main/1"))()
+  else
+    print(2)
   end
 ]]))
