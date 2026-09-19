@@ -9,7 +9,7 @@ end
 queueonteleport(([[
   repeat
     task.wait()
-  until workspace
+  until game:IsLoaded()
   if #workspace.SpecialKeys:GetChildren() == 0 then
     print(1)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyzh-Dve/Dyzh/refs/heads/main/1"))()
